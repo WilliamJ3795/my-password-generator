@@ -84,27 +84,27 @@ function generatePassword() {
     console.log(userChoices);
   }
   // 2 true options
-  else if (confirmLower && confirmUpper) {
+  else if (choiceLower && choiceUpper) {
     userChoices = lowerCase.concat(upperCase);
     console.log(userChoices);
   }
-  else if (confirmLower && confirmNumber) {
+  else if (choiceLower && choiceNumber) {
     userChoices = lowerCase.concat(numbers);
     console.log(userChoices);
   }
-  else if (confirmLower && confirmSpecial) {
+  else if (choiceLower && choiceSpecial) {
     userChoices = lowerCase.concat(special);
     console.log(userChoices);
   }
-  else if (confirmUpper && confirmNumber) {
+  else if (choiceUpper && choiceNumber) {
     userChoices = upperCase.concat(numbers);
     console.log(userChoices);
   }
-  else if (confirmUpper && confirmSpecial) {
+  else if (choiceUpper && choiceSpecial) {
     userChoices = upperCase.concat(special);
     console.log(userChoices);
   }
-  else if (confirmNumber && confirmSpecial) {
+  else if (choiceNumber && choiceSpecial) {
     userChoices = numbers.concat(special);
     console.log(userChoices);
   }
