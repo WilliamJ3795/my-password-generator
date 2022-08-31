@@ -37,7 +37,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Start Function
 function generatePassword() {
-  // Ask four user Input
+  // user Input
   passwordLength = prompt("How many characters do want? Choose between 8 and 128");
   console.log("Password length " + passwordLength);
   if(!passwordLength) {
@@ -57,4 +57,12 @@ function generatePassword() {
     choiceSpecial = confirm("Will this contain special characters?");
   console.log("Special Character " + choiceSpecial);
 
+  }
+  // No answer then
+  if (!choiceLower && !choiceUpper && !choiceNumber && !choiceSpecial) {
+    userChoices = alert("You must choose a criteria");
+  // 4 true options
+  } else if (confirmLower && confirmUpper && confirmNumber && confirmSpecial) {
+    userChoices = lowerCase.concat(upperCase, numbers, special);
+    console.log(userChoices);
   };
