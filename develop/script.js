@@ -108,5 +108,22 @@ function generatePassword() {
     userChoices = numbers.concat(special);
     console.log(userChoices);
   }
+   // 1 true option
+   else if (choiceLower) {
+    userChoices = lowerCase;
+    console.log(userChoices);
+  }
+  else if (choiceUpper) {
+    userChoices = blankUpper.concat(upperCase);
+    console.log(userChoices);
+  }
+  else if (choiceNumber) {
+    userChoices = numbers;
+    console.log(userChoices);
+  }
+  else if (choiceSpecial) {
+    userChoices = special;
+    console.log(userChoices);
+  };
   
   ;
