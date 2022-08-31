@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var passwordLength;
 var choiceUpper;
 var choiceLower;
-var choicemNumber;
+var choiceNumber;
 var choiceSpecial;
 var userChoices;
 
@@ -52,17 +52,34 @@ function generatePassword() {
     console.log("Lower case " + choiceLower);
     choiceUpper = confirm("Will this contain upper case letters?");
     console.log("Upper case " + choiceUpper);
-    choiceumber = confirm("Will this contain numbers?");
+    choiceNumber = confirm("Will this contain numbers?");
     console.log("Number " + choiceNumber);
     choiceSpecial = confirm("Will this contain special characters?");
   console.log("Special Character " + choiceSpecial);
 
   }
-  // No answer then
+  // if no choice is made
   if (!choiceLower && !choiceUpper && !choiceNumber && !choiceSpecial) {
     userChoices = alert("You must choose a criteria");
   // 4 true options
-  } else if (confirmLower && confirmUpper && confirmNumber && confirmSpecial) {
+  } else if (choiceLower && choiceUpper && choiceNumber && choiceSpecial) {
     userChoices = lowerCase.concat(upperCase, numbers, special);
+    console.log(userChoices);
+  }
+  // 3 true options
+  else if (choiceLower && choiceUpper && choiceNumber) {
+    userChoices = lowerCase.concat(upperCase, numbers);
+    console.log(userChoices);
+  }
+  else if (choiceLower && choiceUpper && choiceSpecial) {
+    userChoices = lowerCase.concat(upperCase, special);
+    console.log(userChoices);
+  }
+  else if (choiceLower && choiceNumber && choiceSpecial) {
+    userChoices = lowerCase.concat(numbers, special);
+    console.log(userChoices);
+  }
+  else if (choiceUpper && choiceNumber && choiceSpecial) {
+    userChoices = upperCase.concat(numbers, special);
     console.log(userChoices);
   };
