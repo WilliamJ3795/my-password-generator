@@ -13,7 +13,7 @@ var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
     upperCase = lowerCase.map(toUpper);
 
-// Var To upperCase/ toUpperCase converts a string to uppercase letters
+// Var newUpper toUpperCase converts a string to uppercase letters
 var newUpper = []; 
 var toUpper = function (x) {
   return x.toUpperCase();
@@ -126,4 +126,8 @@ function generatePassword() {
     userChoices = special;
     console.log(userChoices);
   }
+   // Empty variable for the password length
+   var blankPassword = [];
+   
+
   ;
