@@ -129,7 +129,7 @@ function generatePassword() {
    // Loop for random selection
   for (var i = 0; i < passwordLength; i++) {
     var anyChoices = userChoices[Math.floor(Math.random() * userChoices.length)]; //math.floor used with Math.random
-    blankPassword.push(anyChoices);
+    blankPassword.push(anyChoices); // adds amy element to a new array
     console.log(anyChoices);
   }
    // Join and return the password 
