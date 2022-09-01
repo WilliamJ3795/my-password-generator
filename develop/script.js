@@ -128,6 +128,12 @@ function generatePassword() {
   }
    // Empty variable for the password length
    var blankPassword = [];
-   
+    
+   // Loop for random selection
+  for (var i = 0; i < passwordLength; i++) {
+    var anyChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+    passwordBlank.push(anyChoices);
+    console.log(anyChoices);
+  }
 
   ;
