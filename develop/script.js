@@ -46,13 +46,13 @@ function generatePassword() {
     console.log("Password length " + passwordLength);
   
   } else { 
-    choiceLower = confirm("Will this contain lower case letters?");
+    choiceLower = confirm("Do you want lower case letters?");
     console.log("Lower case " + choiceLower);
-    choiceUpper = confirm("Will this contain upper case letters?");
+    choiceUpper = confirm("Do you want upper case letters?");
     console.log("Upper case " + choiceUpper);
-    choiceNumber = confirm("Will this contain numbers?");
+    choiceNumber = confirm("Do you want numbers?");
     console.log("Number " + choiceNumber);
-    choiceSpecial = confirm("Will this contain special characters?");
+    choiceSpecial = confirm("How about special characters?");
     console.log("Special Character " + choiceSpecial);
 
   }
