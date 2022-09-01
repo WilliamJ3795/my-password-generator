@@ -11,18 +11,15 @@ var userChoices;
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-    upperCase = lowerCase.map(toUpper);
+  
 
-// Var newUpper toUpperCase converts a string to uppercase letters
+// Var newUpper to blank array/ toUpperCase converts a string to uppercase letters
 var newUpper = []; 
 var toUpper = function (x) {
   return x.toUpperCase();
 };
 
-
-//--------------------------------------
-//var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-//var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+upperCase = lowerCase.map(toUpper);
 
 // Write password to the #password input
 function writePassword() {
@@ -42,7 +39,7 @@ function generatePassword() {
   passwordLength = prompt("How many characters do want? Choose between 8 and 128");
   console.log("Password length " + passwordLength);
   if(!passwordLength) {
-    alert("Need a value");
+    alert("You must choose");
 
   } else if (passwordLength < 8 || passwordLength > 128) {
     passwordLength = prompt("You must choose between 8 and 128");
@@ -61,7 +58,7 @@ function generatePassword() {
   }
   // alerts user if no option is chosen
   if (!choiceLower && !choiceUpper && !choiceNumber && !choiceSpecial) {  
-    userChoices = alert("You must choose a criteria"); 
+    userChoices = alert("Let's try this again"); 
   // 4 user options
   } else if (choiceLower && choiceUpper && choiceNumber && choiceSpecial) {
     userChoices = lowerCase.concat(upperCase, numbers, special); // concat() joins mutiple arrays and returns a new array 
@@ -131,9 +128,13 @@ function generatePassword() {
     
    // Loop for random selection
   for (var i = 0; i < passwordLength; i++) {
-    var anyChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
-    passwordBlank.push(anyChoices);
+    var anyChoices = userChoices[Math.floor(Math.random() * userChoices.length)]; //math.floor used with Math.random
+    blankPassword.push(anyChoices);
     console.log(anyChoices);
   }
-
-  ;
+   // Join and return the password 
+   var password = blankPassword.join("");
+   console.log("Your new Pasword is: " + password);
+   return password;
+   
+ };
