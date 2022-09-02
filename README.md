@@ -30,4 +30,4 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![](my passwordgenerator.gif.gif)
+![](C:\Users\WIlli\Desktop\my-password-generator\my passwordgenerator.gif.gif)
