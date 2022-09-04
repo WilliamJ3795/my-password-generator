@@ -30,5 +30,5 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![](C:\Users\WIlli\Desktop\my-password-generator\my passwordgenerator.gif.gif)
+![A user clicks and enter text/numbers in prompt and recieves a password based on critera](assets\mypasswordgenerator.gif)
 https://williamj3795.github.io/my-password-generator/
